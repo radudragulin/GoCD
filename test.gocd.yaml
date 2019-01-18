@@ -18,7 +18,7 @@ pipelines:
            maven:
              tasks:
               - exec: # indicates type of task
-                  working_directory: emi
+                  working_directory: emi/restApi
                   command: mvn
                   arguments:
                    - "clean"
