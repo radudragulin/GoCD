@@ -10,12 +10,7 @@ pipelines:
         # keyword git says about type of material and url at once
         git: https://github.com/radudragulin/GoCD.git
         branch: master
-      myupstream: # this name does not matter, but there should be no 2 materials with the same name
-        # type is optional here, material type is implied based on presence of pipeline and stage fields
-        # type: dependency
-        pipeline: pipe2
-        stage: test
-   stages:
+    stages:
      - build:
          clean_workspace: true
          jobs: 
