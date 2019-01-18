@@ -8,7 +8,7 @@ pipelines:
     materials:
       mygit: # this is the name of material, the name can contain only of alphanumeric & underscore characters
         # keyword git says about type of material and url at once
-        git: https://github.com/radudragulin/GoCD.git
+        git: https://Emanuel9:3d7e310517bc2bed8109b2c92eef02803051270b@github.com/Emanuel9/malimathon.git
         branch: master
     stages:
      - build:
@@ -17,7 +17,8 @@ pipelines:
            maven:
              tasks:
               - exec: # indicates type of task
-                  command: make
+                  command: mvn
                   arguments:
-                   - "VERBOSE=true"
+                   - "clean"
+                   - "package"
           
