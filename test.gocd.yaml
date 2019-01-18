@@ -9,7 +9,8 @@ pipelines:
       mygit: # this is the name of material, the name can contain only of alphanumeric & underscore characters
         # keyword git says about type of material and url at once
         git: https://github.com/Emanuel9/malimathon.git
-        branch: master
+        branch: masteri
+        destination: emi
     stages:
      - build:
          clean_workspace: true
@@ -17,8 +18,9 @@ pipelines:
            maven:
              tasks:
               - exec: # indicates type of task
+                  working_directory: emi
                   command: mvn
                   arguments:
                    - "clean"
                    - "package"
-          
+                   
