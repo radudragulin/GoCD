@@ -16,7 +16,7 @@ pipelines:
         pipeline: pipe2
         stage: test
    stages:
-     - build: Build
+     - build:
          clean_workspace: true
          jobs: 
            maven:
