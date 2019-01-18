@@ -18,6 +18,11 @@ pipelines:
    stages:
      - build: Build
          clean_workspace: true
-         jobs:
+         jobs: 
+           maven:
+             tasks:
+              - exec: # indicates type of task
+                  command: make
+                  arguments:
+                   - "VERBOSE=true"
           
-
