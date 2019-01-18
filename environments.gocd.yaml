@@ -2,7 +2,5 @@ environments:
   testing:
     environment_variables:
       DEPLOYMENT: testing
-    secure_variables:
-      ENV_PASSWORD: "s&Du#@$xsSa"
     pipelines:
       - mypipe1
