@@ -1,0 +1,23 @@
+pipelines:
+  mypipe1: # definition of mypipe1 pipeline
+    group: mygroup # note that the group name can contain only of alphanumeric & underscore characters
+    label_template: "${mygit[:8]}"
+    lock_behavior: none
+    parameters: # list of parameters that can be configured for a pipeline
+      param1: value1
+    materials:
+      mygit: # this is the name of material, the name can contain only of alphanumeric & underscore characters
+        # keyword git says about type of material and url at once
+        git: https://github.com/radudragulin/GoCD.git
+        branch: master
+      myupstream: # this name does not matter, but there should be no 2 materials with the same name
+        # type is optional here, material type is implied based on presence of pipeline and stage fields
+        # type: dependency
+        pipeline: pipe2
+        stage: test
+   stages:
+     - build: Build
+         clean_workspace: true
+         jobs:
+          
+
