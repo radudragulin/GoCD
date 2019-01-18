@@ -6,4 +6,3 @@ environments:
       ENV_PASSWORD: "s&Du#@$xsSa"
     pipelines:
       - mypipe1
-      - mypipe2
